@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("https://backgrounddownload.com/wp-content/uploads/2018/09/business-background-website-6.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-color: #f7f7f7;
+        }
+
+        .login-form {
+            width: 340px;
+            margin: 50px auto;
+        }
+
+        .login-form form {
+            margin-bottom: 15px;
+            background: #f7f7f7;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+        }
+
+        .login-form h2 {
+            margin: 0 0 15px;
+        }
+
+        .form-control, .btn {
+            min-height: 38px;
+            border-radius: 2px;
+        }
+
+        .btn {
+            font-size: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="login-form">
+    <form action="/login" method="post">
+        <div class="form-group">
+            <label for="username">Login</label>
+            <input aria-describedby="usernameHelp" class="form-control" id="username" name="username" required
+                   type="text">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input aria-describedby="passwordHelp" class="form-control" id="password" name="password" required
+                   type="password">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-secondary btn-block" type="submit">Log In</button>
+        </div>
+        <strong th:text="${error}"></strong>
+    </form>
+</div>
+</body>
+</html>

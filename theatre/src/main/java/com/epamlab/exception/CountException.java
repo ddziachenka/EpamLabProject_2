@@ -1,0 +1,7 @@
+package com.epamlab.exception;
+
+public class CountException extends RuntimeException {
+    public CountException(String message) {
+        super(message);
+    }
+}
