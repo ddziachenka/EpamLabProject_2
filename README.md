@@ -1,5 +1,5 @@
 
-Training project "Theatre Tickets Sale"
+Training project "Theatre tickets online selling"
 
 Stack: Spring (Core, MVC, Security, JDBC Template), H2, Maven, Log4j
 
